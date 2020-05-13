@@ -9,6 +9,7 @@ import time
 # resource manager ipaddres and port
 ipaddress = "10.0.10.36"
 hsport = "19888"
+jobname = "MergeAction"
 
 # launch chrome browser and open history server UI
 browser = webdriver.Chrome()
@@ -18,7 +19,7 @@ table_tab = 2
 
 # Search for the mergeAction jobs
 search_box = browser.find_element_by_xpath('//*[@id="jobs_filter"]/label/input')
-search_box.send_keys('MergeAction')
+search_box.send_keys(jobname)
 time.sleep(10)
 app_list = []
 
